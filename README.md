@@ -1,2 +1,1 @@
-# bmg-fe-resume
-bmg求职web前端工程师简历
+这是[张勋求职web前端工程师简历](http://example.com/).
