@@ -8,7 +8,6 @@ $(function () {
         navigationPosition: 'right',
         onLeave: function (index, nextIndex, direction) {
             $(this).find('[data-animate]').map(function () {
-                console.log(this)
                 $(this).removeClass($(this).data('init'));
             });
 
@@ -37,4 +36,8 @@ $(function () {
         $(this).addClass($(this).data('init'));
     });
 
+    /*   计算工作年份   */
+    $('#year').html((function () {
+        return new Date().getFullYear() - 2014;
+    }()));
 });
