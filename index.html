@@ -21,7 +21,7 @@
             src="./static/img/logo.jpeg" alt="我的头像"/></a>
 </header>
 <div id="fullPage">
-    <div class="section">
+    <div class="section active">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
                 <img class="user-img animated"
@@ -147,7 +147,7 @@
             </div>
         </div>
     </div>
-    <div class="section active">
+    <div class="section">
         <div class="flex-box flex-center">
             <div class="flex-item-1 text-center">
                 <h3 class="title">项目经验</h3>
@@ -295,43 +295,6 @@
 <script src="static/lib/jquery/jquery.easings.min.js"></script>
 <script src="static/lib/fullpage/scrolloverflow.min.js"></script>
 <script src="static/lib/fullpage/jquery.fullpage.min.js"></script>
-<script>
-    $(function () {
-        $('#fullPage').fullpage({
-            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#a29971', '#87b0a5', '#4d5e8f'],
-            scrollingSpeed: 300,
-            navigation: true,
-            navigationPosition: 'right',
-            onLeave: function (index, nextIndex, direction) {
-                $(this).find('[data-animate]').map(function () {
-                    console.log(this)
-                    $(this).removeClass($(this).data('init'));
-                });
-
-                var relate = null;
-                if (direction == 'down') {
-                    relate = $(this).next();
-                } else {
-                    relate = $(this).prev();
-                }
-
-                relate.find('[data-animate]').map(function () {
-                    $(this).addClass($(this).data('init'));
-                });
-            }
-        });
-
-        $('[data-animate]').hover(function () {
-            $(this).removeClass($(this).data('init')).addClass($(this).data('animate'));
-        }, function () {
-            $(this).removeClass($(this).data('animate'));
-        });
-
-        $('.section').first().find('[data-animate]').map(function () {
-            $(this).addClass($(this).data('init'));
-        });
-
-    });
-</script>
+<script src="static/js/index.js"></script>
 </body>
 
