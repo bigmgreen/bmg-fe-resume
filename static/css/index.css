@@ -57,6 +57,12 @@
     font-size: 30px;
     display: block;
 }
+.about-title span {
+    font-size: 16px;
+}
+.about-title span span{
+    font-size: 12px;
+}
 /*   关于我   end   */
 
 /*    经历  start      */
@@ -74,6 +80,10 @@
     margin: 0 auto;
     text-align: center;
     font-size: 0;
+}
+
+.experience-wrap a{
+    display: inline-block;
 }
 
 .experience {
